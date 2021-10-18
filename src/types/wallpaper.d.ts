@@ -1,25 +1,25 @@
 export interface WallpaperConfig {
-    video?: VideoConfig;
-    image?: ImageConfig;
+  video?: VideoConfig;
+  image?: ImageConfig;
 }
 
 export interface ImageConfig {
-    source: string;
-    position?: string;
-    repeat?: string;
-    size?: string;
-    color?: string;
+  source: string;
+  position?: string;
+  repeat?: string;
+  size?: string;
+  color?: string;
 }
 
 export interface VideoConfig {
-    source: string;
-    speed?: number;
+  source: string;
+  speed?: number;
 }
 
 export interface WallpaperComponentProps {
-    config: WallpaperConfig
+  config: WallpaperConfig;
 }
 
 export interface VideoContainerProps {
-    video: string;
+  video: string;
 }

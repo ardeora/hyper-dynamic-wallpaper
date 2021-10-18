@@ -1,3 +1,3 @@
 import { Middleware } from 'redux';
 
-export type hyperMiddleware = Middleware
+export type hyperMiddleware = Middleware;

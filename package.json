@@ -9,7 +9,9 @@
   ],
   "scripts": {
     "dev": "webpack --mode=development --hot --watch",
-    "build": "webpack --mode=production"
+    "build": "yarn run lint:fix && webpack --mode=production",
+    "lint": "eslint './src/**/*.{js,ts,tsx}'",
+    "lint:fix": "eslint './src/**/*.{js,ts,tsx}' --fix"
   },
   "author": "Aryan Deora",
   "main": "dist/hyper-wallpaper.js",
@@ -23,8 +25,16 @@
     "@babel/preset-typescript": "^7.15.0",
     "@types/react": "^17.0.30",
     "@types/redux": "^3.6.0",
+    "@typescript-eslint/eslint-plugin": "^5.1.0",
+    "@typescript-eslint/parser": "^5.1.0",
     "babel-loader": "^8.2.2",
+    "eslint": "^8.0.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.26.1",
+    "prettier": "^2.4.1",
     "terser-webpack-plugin": "^5.2.4",
+    "typescript": "^4.4.4",
     "webpack": "^5.58.1",
     "webpack-cli": "^4.9.0",
     "webpack-node-externals": "^3.0.0"
