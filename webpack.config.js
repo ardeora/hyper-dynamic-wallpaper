@@ -8,7 +8,7 @@ module.exports = {
   entry: './src/index.ts',
   output: {
     path: path.resolve(__dirname + "/dist"),
-    filename: 'my-hyper-app.js',
+    filename: 'hyper-wallpaper.js',
     libraryTarget: 'commonjs'
   },
   optimization: {
