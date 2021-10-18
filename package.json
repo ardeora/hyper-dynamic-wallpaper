@@ -1,0 +1,36 @@
+{
+  "name": "hyper-wallpaper",
+  "version": "0.0.1",
+  "description": "",
+  "keywords": [
+    "hyper.app",
+    "hyper",
+    "hyperterm"
+  ],
+  "scripts": {
+    "dev": "webpack --mode=development --hot --watch",
+    "build": "webpack --mode=production"
+  },
+  "author": "Aryan Deora",
+  "main": "dist/hyper-wallpaper.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.15.8",
+    "@babel/plugin-proposal-class-properties": "^7.14.5",
+    "@babel/plugin-proposal-object-rest-spread": "^7.15.6",
+    "@babel/preset-env": "^7.15.8",
+    "@babel/preset-react": "^7.14.5",
+    "@babel/preset-typescript": "^7.15.0",
+    "@types/react": "^17.0.30",
+    "@types/redux": "^3.6.0",
+    "babel-loader": "^8.2.2",
+    "terser-webpack-plugin": "^5.2.4",
+    "webpack": "^5.58.1",
+    "webpack-cli": "^4.9.0",
+    "webpack-node-externals": "^3.0.0"
+  },
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}
