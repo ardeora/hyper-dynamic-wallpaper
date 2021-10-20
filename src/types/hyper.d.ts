@@ -1,3 +1,10 @@
-import { Middleware } from 'redux';
+export type RPCEventListener = () => void;
 
-export type hyperMiddleware = Middleware;
+declare global {
+  interface Window {
+    rpc: {
+      on: (event: string, callback: RPCEventListener) => void;
+      emit: (event: string) => void;
+    };
+  }
+}

@@ -6,7 +6,7 @@ module.exports = {
     sourceType: 'module',
   },
   plugins: ['prettier'],
-  ignorePatterns: ['leaflet-svg-marker.js', '**/stories/*.tsx', 'src/index.ts'],
+  ignorePatterns: ['src/index.ts'],
   rules: {
     'prettier/prettier': [
       'error',

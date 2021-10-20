@@ -1,8 +1,3 @@
-export interface WallpaperConfig {
-  video?: VideoConfig;
-  image?: ImageConfig;
-}
-
 export interface ImageConfig {
   source: string;
   position?: string;
@@ -16,10 +11,36 @@ export interface VideoConfig {
   speed?: number;
 }
 
+export interface WallpaperConfig {
+  video?: VideoConfig | VideoConfig[];
+  image?: ImageConfig | ImageConfig[];
+}
+
+export interface HOCState {
+  configList: WallpaperConfigList;
+  configIdx: number;
+}
+
+export interface HOCProps {
+  hyperWallpaper: WallpaperConfig;
+}
+
 export interface WallpaperComponentProps {
-  config: WallpaperConfig;
+  config: CategorizedConfigTypes;
 }
 
 export interface VideoContainerProps {
   video: string;
 }
+
+export interface TypedConfig {
+  category: string;
+}
+
+export interface ImageConfigCategorized extends TypedConfig, ImageConfig {}
+export interface VideoConfigCategorized extends TypedConfig, VideoConfig {}
+
+export type CategorizedConfigTypes = ImageConfigCategorized | VideoConfigCategorized;
+export type ConfigTypes = ImageConfig | VideoConfig;
+
+export type WallpaperConfigList = CategorizedConfigTypes[];

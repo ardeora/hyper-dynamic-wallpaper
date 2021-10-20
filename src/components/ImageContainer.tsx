@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { ImageConfig } from '../types/wallpaper';
-import { isStrUrl } from '../utils/source-parser';
+import { isStrUrl } from '../utils/util';
 import { IMAGE_DEFAULTS } from '../utils/defaults';
 
 const ImageContainer: FC<ImageConfig> = (config) => {

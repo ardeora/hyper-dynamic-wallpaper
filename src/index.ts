@@ -1,27 +1,11 @@
-import myDecorateHyper from './core/Container'
+import myDecorateHyper from './hyper/decorateHyper'
+import reduceUI from './hyper/reduceUI'
+import mapHyperState from './hyper/mapHyperState'
+import decorateConfig from './hyper/decorateConfig'
+import decorateMenu from './hyper/decorateMenu'
 
-exports.reduceUI = (state, { type, config }) => {
-  switch (type) {
-    case 'CONFIG_LOAD':
-    case 'CONFIG_RELOAD': {
-      return state.set('hyperWallpaper', config.hyperWallpaper)
-    }
-    default:
-      break
-  }
-  return state
-}
-
-exports.mapHyperState = (state, map) => {
-  return Object.assign({}, map, {
-    hyperWallpaper: state.ui.hyperWallpaper || {}
-  })
-}
-
-exports.decorateConfig = (config) => {
-  return Object.assign({}, config, {
-    backgroundColor: '#00000000',
-  });
-}
-
-exports.decorateHyper = myDecorateHyper
+exports.reduceUI       = reduceUI;
+exports.mapHyperState  = mapHyperState;
+exports.decorateConfig = decorateConfig;
+exports.decorateHyper  = myDecorateHyper;
+exports.decorateMenu   = decorateMenu;

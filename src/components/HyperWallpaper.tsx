@@ -15,8 +15,8 @@ const HyperWallpaper: FC<WallpaperComponentProps> = ({ config }) => {
         pointerEvents: 'none',
       }}
     >
-      {config.video ? <VideoContainer {...config.video} /> : null}
-      {config.image ? <ImageContainer {...config.image} /> : null}
+      {config.category == 'video' ? <VideoContainer {...config} /> : null}
+      {config.category == 'image' ? <ImageContainer {...config} /> : null}
     </div>
   );
 };
