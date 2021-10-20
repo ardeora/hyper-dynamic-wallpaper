@@ -15,7 +15,7 @@ export function flattenConfig(config: WallpaperConfig): WallpaperConfigList {
       configList = [...configList, ...categorizedConfigs];
       continue;
     }
-    configList.push(config[key]);
+    configList.push(applyCategory(config[key], key));
   }
 
   return configList;

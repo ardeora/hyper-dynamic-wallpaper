@@ -13,6 +13,13 @@ const decorateMenu = (menu) => {
               focusedWindow?.rpc.emit(`${PLUGIN_NAME}:next`);
             },
           },
+          {
+            label: 'Previous Wallpaper',
+            accelerator: `${PREFIX_KEY}+I`,
+            click(item, focusedWindow) {
+              focusedWindow?.rpc.emit(`${PLUGIN_NAME}:previous`);
+            },
+          },
         ],
       });
       break;

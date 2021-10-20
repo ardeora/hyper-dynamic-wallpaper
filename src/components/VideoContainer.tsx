@@ -1,9 +1,8 @@
 import React, { FC, useEffect, useRef } from 'react';
-import { VideoConfig } from '../types/wallpaper';
+import { VideoConfigCategorized } from '../types/wallpaper';
 import { isStrUrl } from '../utils/util';
 
-const VideoContainer: FC<VideoConfig> = (config) => {
-  console.log('Video Re-Rendered', JSON.parse(JSON.stringify(config)));
+const VideoContainer: FC<VideoConfigCategorized> = (config) => {
   const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {

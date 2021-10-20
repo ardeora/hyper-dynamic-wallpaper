@@ -1,9 +1,9 @@
 import React, { FC } from 'react';
-import { ImageConfig } from '../types/wallpaper';
+import { ImageConfigCategorized } from '../types/wallpaper';
 import { isStrUrl } from '../utils/util';
 import { IMAGE_DEFAULTS } from '../utils/defaults';
 
-const ImageContainer: FC<ImageConfig> = (config) => {
+const ImageContainer: FC<ImageConfigCategorized> = (config) => {
   return (
     <div
       style={{
