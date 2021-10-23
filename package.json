@@ -1,5 +1,5 @@
 {
-  "name": "hyper-wallpaper",
+  "name": "hyper-dynamic-wallpaper",
   "version": "0.0.1",
   "description": "Add Video, GIF, Gradient, Image Backgrounds To Hyper Terminal",
   "keywords": [
@@ -14,7 +14,7 @@
     "lint:fix": "eslint './src/**/*.{js,ts,tsx}' --fix"
   },
   "author": "Aryan Deora",
-  "main": "dist/hyper-wallpaper.js",
+  "main": "dist/hyper-dynamic-wallpaper.js",
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.15.8",

@@ -10,7 +10,7 @@ export default function (Hyper) {
       super(props);
 
       this.state = {
-        configList: flattenConfig(this.props.hyperWallpaper),
+        configList: flattenConfig(this.props.wallpapers),
         configIdx: 0,
       };
 
@@ -29,11 +29,11 @@ export default function (Hyper) {
     }
 
     componentDidUpdate(prevProps) {
-      const prevPropsStr = JSON.stringify(prevProps.hyperWallpaper);
-      const currPropsStr = JSON.stringify(this.props.hyperWallpaper);
+      const prevPropsStr = JSON.stringify(prevProps.wallpapers);
+      const currPropsStr = JSON.stringify(this.props.wallpapers);
       if (prevPropsStr !== currPropsStr) {
         this.setState({
-          configList: flattenConfig(this.props.hyperWallpaper),
+          configList: flattenConfig(this.props.wallpapers),
           configIdx: 0,
         });
       }

@@ -2,7 +2,7 @@ const reduceUI = (state, { type, config }) => {
   switch (type) {
     case 'CONFIG_LOAD':
     case 'CONFIG_RELOAD': {
-      return state.set('hyperWallpaper', config.hyperWallpaper);
+      return state.set('wallpapers', config.wallpapers);
     }
     default:
       break;

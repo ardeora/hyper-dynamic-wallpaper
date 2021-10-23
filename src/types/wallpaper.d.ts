@@ -33,7 +33,7 @@ export interface HOCState {
 }
 
 export interface HOCProps {
-  hyperWallpaper: WallpaperConfig;
+  wallpapers: WallpaperConfig;
 }
 
 export interface WallpaperComponentProps {
