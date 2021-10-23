@@ -1,12 +1,17 @@
 {
   "name": "hyper-dynamic-wallpaper",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "Add Video, GIF, Gradient, Image Backgrounds To Hyper Terminal",
   "keywords": [
-    "hyper.app",
+    "terminal",
     "hyper",
-    "hyperterm"
+    "hyperterm",
+    "hyper-wallpaper"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ardeora/hyper-dynamic-wallpaper.git"
+  },
   "scripts": {
     "dev": "webpack --mode=development --hot --watch",
     "build": "yarn run lint:fix && webpack --mode=production",
@@ -23,6 +28,7 @@
     "@babel/preset-env": "^7.15.8",
     "@babel/preset-react": "^7.14.5",
     "@babel/preset-typescript": "^7.15.0",
+    "@emotion/babel-plugin": "^11.3.0",
     "@emotion/css": "^11.5.0",
     "@types/react": "^17.0.30",
     "@types/redux": "^3.6.0",
@@ -34,14 +40,13 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.26.1",
     "prettier": "^2.4.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
     "terser-webpack-plugin": "^5.2.4",
     "typescript": "^4.4.4",
     "webpack": "^5.58.1",
     "webpack-cli": "^4.9.0",
     "webpack-node-externals": "^3.0.0"
   },
-  "dependencies": {
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
-  }
+  "dependencies": {}
 }
