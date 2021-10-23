@@ -1,10 +1,10 @@
-import { PLUGIN_NAME, PREFIX_KEY, MENU_TAB } from '../utils/constants';
+import { PLUGIN_NAME, PREFIX_KEY, MENU_TAB, PLUGIN_TITLE } from '../utils/constants';
 
 const decorateMenu = (menu) => {
   for (const menuItem of menu) {
     if (menuItem.label === MENU_TAB) {
       menuItem.submenu = menuItem.submenu.concat({
-        label: PLUGIN_NAME,
+        label: PLUGIN_TITLE,
         submenu: [
           {
             label: 'Next Wallpaper',
