@@ -3,14 +3,11 @@
 <div style="text-align: center; margin-bottom: 16px;">
 <img src="https://img.shields.io/npm/v/hyper-dynamic-wallpaper.svg?style=flat"/>
 <img alt="npm" src="https://img.shields.io/npm/dt/hyper-dynamic-wallpaper">
-
-
-Add Video, GIF, Gradient, Image Backgrounds To Hyper Terminal
 </div>
 
-<video style="width: 100%;" autoPlay loop muted>
-    <source src="https://github.com/ardeora/hyper-dynamic-wallpaper/blob/main/docs/assets/preview.mov?raw=true"/>
-</video>
+Add Video, GIF, Gradient, Image Backgrounds To Hyper Terminal
+
+https://user-images.githubusercontent.com/45807386/140005969-b3c7c26a-18d0-4bea-8c24-218cef5eb0cf.mov
 
 ## Install
 To set up the project for development:
