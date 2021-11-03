@@ -34,17 +34,110 @@ config: {
 }
 ```
 
-### Video Wallpapers
-```js
-config: {
-  // ...Hyper config
-  wallpapers: {
-    video: VideoConfig | VideoConfig[]
+
+<details>
+  <summary>Video Wallpapers</summary>
+  
+  ```js
+  config: {
+    // ...Hyper config
+    wallpapers: {
+      video: VideoConfig | VideoConfig[]
+    }
   }
-}
-```
-#### `VideoConfig` Options
-| Property | Required | Default Value | Description                 |
-|----------|----------|---------------|-----------------------------|
-| source   | yes      |       -       | Local path or link to video |
-| speed    | no       | 1             | Video Speed                 |
+  ```
+  #### `VideoConfig` Options
+  | Property | Required | Default Value | Description                 |
+  |----------|----------|---------------|-----------------------------|
+  | source   | yes      |       -       | Local path or link to video |
+  | speed    | no       | 1             | Video Speed                 |
+
+  
+  #### Examples: Video Wallpaper Config
+  
+  ##### Single Video Wallpaper
+  ```js
+  config: {
+    // ...Hyper config
+    wallpapers: {
+      video: {
+        source: '/Users/aryandeora/Desktop/Downloads/aurora.mp4',
+        speed: 1
+      }
+    }
+  }
+  ```
+  
+  ##### Multiple Video Wallpapers
+  ```js
+  config: {
+    // ...Hyper config
+    wallpapers: {
+      video: [
+        {
+          source: '/Users/aryandeora/Desktop/Downloads/aurora.mp4',
+        },
+        {
+          source: 'https://cdn.dribbble.com/users/288987/screenshots/15269498/media/3e7d1d6ca30d7793f72168cb99d6e5b8.mp4',
+          speed: 0.8
+        }
+      ]
+    }
+  }
+  ```
+</details>
+
+<details>
+  <summary>Image Wallpapers</summary>
+  
+  ```js
+  config: {
+    // ...Hyper config
+    wallpapers: {
+      video: ImageConfig | ImageConfig[]
+    }
+  }
+  ```
+  #### `ImageConfig` Options
+  | Property | Required | Default Value | Description                        |
+  |----------|----------|---------------|------------------------------------|
+  | source   | yes      |       -       | Local path or link to image        |
+  | repeat   | no       | `no-repeat`   | CSS [`background-repeat`](https://developer.mozilla.org/en-US/docs/Web/CSS/background-repeat) property   |
+  | color    | no       | `black`       | CSS [`background-color`](https://developer.mozilla.org/en-US/docs/Web/CSS/background-color) property    |
+  | position | no       | `center`      | CSS [`background-position`](https://developer.mozilla.org/en-US/docs/Web/CSS/background-position) property |
+  | size     | no       | `cover`       | CSS [`background-size`](https://developer.mozilla.org/en-US/docs/Web/CSS/background-size) property     |
+
+  
+  #### Examples: Video Wallpaper Config
+  
+  ##### Single Video Wallpaper
+  ```js
+  config: {
+    // ...Hyper config
+    wallpapers: {
+      video: {
+        source: '/Users/aryandeora/Desktop/Downloads/aurora.mp4',
+        speed: 1
+      }
+    }
+  }
+  ```
+  
+  ##### Multiple Video Wallpapers
+  ```js
+  config: {
+    // ...Hyper config
+    wallpapers: {
+      video: [
+        {
+          source: '/Users/aryandeora/Desktop/Downloads/aurora.mp4',
+        },
+        {
+          source: 'https://cdn.dribbble.com/users/288987/screenshots/15269498/media/3e7d1d6ca30d7793f72168cb99d6e5b8.mp4',
+          speed: 0.8
+        }
+      ]
+    }
+  }
+  ```
+</details>
