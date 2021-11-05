@@ -1,9 +1,9 @@
-const webpack = require('webpack');
-const nodeExternals = require('webpack-node-externals');
-const path = require('path');
-const TerserPlugin = require('terser-webpack-plugin');
+import webpack from 'webpack';
+import nodeExternals from 'webpack-node-externals';
+import path from 'path';
+import TerserPlugin from 'terser-webpack-plugin';
 
-module.exports = {
+const config: webpack.Configuration = {
   target: 'node',
   entry: './src/index.ts',
   output: {
@@ -22,7 +22,6 @@ module.exports = {
       }),
     ],
   },
-  // plugins: [ new webpack.DefinePlugin({ 'global.GENTLY': false }) ],
   externals: [nodeExternals(), 'hyper/component', 'hyper/notify', 'hyper/decorate'],
   module: {
     rules: [
@@ -37,3 +36,5 @@ module.exports = {
     extensions: ['.tsx', '.ts', '.js'],
   },
 };
+
+export default config;
