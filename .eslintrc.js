@@ -6,7 +6,7 @@ module.exports = {
     sourceType: 'module',
   },
   plugins: ['prettier'],
-  ignorePatterns: ['src/index.ts'],
+  ignorePatterns: ['src/index.ts', 'webpack.config.js'],
   rules: {
     'prettier/prettier': [
       'error',
