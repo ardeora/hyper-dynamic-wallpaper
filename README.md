@@ -1,8 +1,11 @@
 # Hyper Wallpaper
 
 <div style="text-align: center; margin-bottom: 16px;">
-<img src="https://img.shields.io/npm/v/hyper-dynamic-wallpaper.svg?style=flat"/>
-<img alt="npm" src="https://img.shields.io/npm/dt/hyper-dynamic-wallpaper">
+  <img src="https://img.shields.io/npm/v/hyper-dynamic-wallpaper.svg?style=for-the-badge"/>
+  <img alt="npm" src="https://img.shields.io/npm/dt/hyper-dynamic-wallpaper?style=for-the-badge">
+  <a href="https://hyper.is/">
+    <img src="https://img.shields.io/badge/made%20for-Hyper-F97588?logo=hyper&style=for-the-badge">
+  </a>
 </div>
 
 <br>
@@ -34,10 +37,13 @@ config: {
 }
 ```
 
+Look at specific wallpaper sections below for more information on how to add different backgrounds.
 
 <details>
   <summary>Video Wallpapers</summary>
-  
+
+  ## Video Wallpapers
+
   ```js
   config: {
     // ...Hyper config
@@ -85,10 +91,13 @@ config: {
     }
   }
   ```
+
 </details>
 
 <details>
   <summary>Image Wallpapers</summary>
+
+  ## Image Wallpapers
   
   ```js
   config: {
@@ -115,9 +124,8 @@ config: {
   config: {
     // ...Hyper config
     wallpapers: {
-      video: {
-        source: '/Users/aryandeora/Desktop/Downloads/aurora.mp4',
-        speed: 1
+      image: {
+        source: '/Users/aryandeora/Desktop/Downloads/image.gif',
       }
     }
   }
@@ -128,13 +136,73 @@ config: {
   config: {
     // ...Hyper config
     wallpapers: {
-      video: [
+      image: [
         {
-          source: '/Users/aryandeora/Desktop/Downloads/aurora.mp4',
+          source: '/Users/aryandeora/Desktop/Downloads/image.gif',
         },
         {
-          source: 'https://cdn.dribbble.com/users/288987/screenshots/15269498/media/3e7d1d6ca30d7793f72168cb99d6e5b8.mp4',
-          speed: 0.8
+          source: 'https://lh3.googleusercontent.com/proxy/pVwXyJdsROLTGHwWQmiPH4xEj-ZE1VjlAJbQN9jAYprMD7QV4R25AFoyFq2Cn0yhKnzCCTKw2lgffd4yeUxUQGljk6IhZqo',
+          position: '90% 50%',
+          size: '35%',
+          color: '#08103a'
+        }
+      ]
+    }
+  }
+  ```
+</details>
+
+<details>
+  <summary>Gradient Wallpapers</summary>
+
+  ## Gradient Wallpapers
+  
+  ```js
+  config: {
+    // ...Hyper config
+    wallpapers: {
+      video: GradientConfig | GradientConfig[]
+    }
+  }
+  ```
+  #### `GradientConfig` Options
+  | Property | Required | Default Value | Description                        |
+  |----------|----------|---------------|------------------------------------|
+  | source   | yes      |       -       | Local path or link to image        |
+  | repeat   | no       | `no-repeat`   | CSS [`background-repeat`](https://developer.mozilla.org/en-US/docs/Web/CSS/background-repeat) property   |
+  | color    | no       | `black`       | CSS [`background-color`](https://developer.mozilla.org/en-US/docs/Web/CSS/background-color) property    |
+  | position | no       | `center`      | CSS [`background-position`](https://developer.mozilla.org/en-US/docs/Web/CSS/background-position) property |
+  | size     | no       | `cover`       | CSS [`background-size`](https://developer.mozilla.org/en-US/docs/Web/CSS/background-size) property     |
+
+  
+  #### Examples: Video Wallpaper Config
+  
+  ##### Single Video Wallpaper
+  ```js
+  config: {
+    // ...Hyper config
+    wallpapers: {
+      image: {
+        source: '/Users/aryandeora/Desktop/Downloads/image.gif',
+      }
+    }
+  }
+  ```
+  
+  ##### Multiple Video Wallpapers
+  ```js
+  config: {
+    // ...Hyper config
+    wallpapers: {
+      image: [
+        {
+          source: '/Users/aryandeora/Desktop/Downloads/image.gif',
+        },
+        {
+          source: 'https://lh3.googleusercontent.com/proxy/pVwXyJdsROLTGHwWQmiPH4xEj-ZE1VjlAJbQN9jAYprMD7QV4R25AFoyFq2Cn0yhKnzCCTKw2lgffd4yeUxUQGljk6IhZqo',
+          position: '90% 50%',
+          size: '35%',
+          color: '#08103a'
         }
       ]
     }
