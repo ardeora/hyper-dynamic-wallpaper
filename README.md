@@ -4,7 +4,7 @@
   <img src="https://img.shields.io/npm/v/hyper-dynamic-wallpaper.svg?style=for-the-badge"/>
   <img alt="npm" src="https://img.shields.io/npm/dt/hyper-dynamic-wallpaper?style=for-the-badge">
   <a href="https://hyper.is/">
-    <img src="https://img.shields.io/badge/made%20for-Hyper-F97588?logo=hyper&style=for-the-badge">
+    <img src="https://img.shields.io/badge/made%20for-Hyper Terminal-F97588?logo=hyper&style=for-the-badge">
   </a>
 </div>
 
@@ -12,11 +12,17 @@
 
 Add Video, GIF, Gradient, Image Backgrounds To Hyper Terminal
 
-https://user-images.githubusercontent.com/45807386/140005969-b3c7c26a-18d0-4bea-8c24-218cef5eb0cf.mov
+https://user-images.githubusercontent.com/45807386/140631214-889fffad-b416-42f3-afad-5d7654f747a6.mov
+
 
 ## Install
 To install `hyper-dynamic-wallpaper`:
 
+### Method 1: Download Release
+1. Download the [latest release](https://github.com/ardeora/hyper-dynamic-wallpaper/releases/download/1.0.1/hyper-dynamic-wallpaper.zip)
+2. Unzip the file and place the `hyper-dynamic-wallpaper` folder in `~/.hyper_plugins/local/`
+
+### Method 2: Repository Clone
 1. Clone this repository into `~/.hyper_plugins/local/`
 2. Run `yarn install` or `npm install` within the project directory
 3. Run `yarn run build` or `npm run build` to build the plugin.
@@ -266,7 +272,7 @@ Look at specific wallpaper sections below for more information on how to add dif
           color: 'hotpink',
         },
         {
-          colors: '#421F41',
+          color: '#421F41',
         }
       ]
     }
@@ -297,7 +303,7 @@ Look at specific wallpaper sections below for more information on how to add dif
     // ...Hyper config
     wallpapers: {
       solid: {
-        colors: '#421F41',
+        color: '#421F41',
       },
       video: [{
           source: '/Users/aryandeora/Desktop/Downloads/aurora.mp4',
