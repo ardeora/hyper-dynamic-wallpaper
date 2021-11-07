@@ -28,6 +28,14 @@ localPlugins: [
 ```
 5. Reload terminal window
 
+## Controls
+##### MacOS
+  1. Press `Command + U` for next wallpaper
+  2. Press `Command + I` for previous wallpaper   
+##### Windows
+  1. Press `Shift + Ctrl + U` for next wallpaper
+  2. Press `Shift + Ctrl + I` for previous wallpaper   
+
 ## Configuring Wallpapers
 To add custom wallpapers add a `wallpapers` object in `~/.hyper.js` like so:
 ```js
@@ -103,7 +111,7 @@ Look at specific wallpaper sections below for more information on how to add dif
   config: {
     // ...Hyper config
     wallpapers: {
-      video: ImageConfig | ImageConfig[]
+      image: ImageConfig | ImageConfig[]
     }
   }
   ```
@@ -117,9 +125,9 @@ Look at specific wallpaper sections below for more information on how to add dif
   | size     | no       | `cover`       | CSS [`background-size`](https://developer.mozilla.org/en-US/docs/Web/CSS/background-size) property     |
 
   
-  #### Examples: Video Wallpaper Config
+  #### Examples: Image Wallpaper Config
   
-  ##### Single Video Wallpaper
+  ##### Single Image Wallpaper
   ```js
   config: {
     // ...Hyper config
@@ -131,14 +139,14 @@ Look at specific wallpaper sections below for more information on how to add dif
   }
   ```
   
-  ##### Multiple Video Wallpapers
+  ##### Multiple Image Wallpapers
   ```js
   config: {
     // ...Hyper config
     wallpapers: {
       image: [
         {
-          source: '/Users/aryandeora/Desktop/Downloads/image.gif',
+          source: '/Users/aryandeora/Desktop/Downloads/image.png',
         },
         {
           source: 'https://lh3.googleusercontent.com/proxy/pVwXyJdsROLTGHwWQmiPH4xEj-ZE1VjlAJbQN9jAYprMD7QV4R25AFoyFq2Cn0yhKnzCCTKw2lgffd4yeUxUQGljk6IhZqo',
@@ -161,42 +169,144 @@ Look at specific wallpaper sections below for more information on how to add dif
   config: {
     // ...Hyper config
     wallpapers: {
-      video: GradientConfig | GradientConfig[]
+      gradient: GradientConfig | GradientConfig[]
     }
   }
   ```
   #### `GradientConfig` Options
   | Property | Required | Default Value | Description                        |
   |----------|----------|---------------|------------------------------------|
-  | source   | yes      |       -       | Local path or link to image        |
-  | repeat   | no       | `no-repeat`   | CSS [`background-repeat`](https://developer.mozilla.org/en-US/docs/Web/CSS/background-repeat) property   |
-  | color    | no       | `black`       | CSS [`background-color`](https://developer.mozilla.org/en-US/docs/Web/CSS/background-color) property    |
-  | position | no       | `center`      | CSS [`background-position`](https://developer.mozilla.org/en-US/docs/Web/CSS/background-position) property |
-  | size     | no       | `cover`       | CSS [`background-size`](https://developer.mozilla.org/en-US/docs/Web/CSS/background-size) property     |
+  | colors           | yes      |       -       | List of colors in the gradient        |
+  | gradientAngle    | no       | 270       | Gradient direction in degrees |
+  | animationTime    | no       | 0   | CSS [`animation-duration`](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-duration) property   |
+  | timingFunction   | no       | `linear`      | CSS [`animation-timing-function`](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-timing-function) property |
+  
 
   
-  #### Examples: Video Wallpaper Config
+  #### Examples: Gradient Wallpaper Config
   
-  ##### Single Video Wallpaper
+  ##### Single Gradient Wallpaper
   ```js
   config: {
     // ...Hyper config
     wallpapers: {
-      image: {
-        source: '/Users/aryandeora/Desktop/Downloads/image.gif',
+      gradient: {
+        colors: ['#F17C58', '#E94584', '#24AADB' , '#27DBB1','#FFDC18', '#FF3706'],
+        animationTime: 30,
+        timingFunction: 'linear',
+        gradientAngle: 270
       }
     }
   }
   ```
   
-  ##### Multiple Video Wallpapers
+  ##### Multiple Gradient Wallpapers
   ```js
   config: {
     // ...Hyper config
     wallpapers: {
+      gradient: [
+        {
+          colors: ['#F17C58', '#E94584', '#24AADB' , '#27DBB1','#FFDC18', '#FF3706'],
+          animationTime: 30,
+          timingFunction: 'linear',
+          gradientAngle: 270
+        },
+        {
+          colors: ['#421F41', '#0475A2'],
+          animationTime: 5,
+          timingFunction: 'linear',
+          gradientAngle: 270
+        }
+      ]
+    }
+  }
+  ```
+</details>
+
+<details>
+  <summary>Solid Color Wallpapers</summary>
+
+  ## Solid Color Wallpapers
+  
+  ```js
+  config: {
+    // ...Hyper config
+    wallpapers: {
+      solid: SolidColorConfig | SolidColorConfig[]
+    }
+  }
+  ```
+  #### `SolidColorConfig` Options
+  | Property | Required | Default Value | Description                        |
+  |----------|----------|---------------|------------------------------------|
+  | color    | yes      |       -       | Background        |
+  
+  #### Examples: Solid Color Wallpaper Config
+  
+  ##### Single Solid Color Wallpaper
+  ```js
+  config: {
+    // ...Hyper config
+    wallpapers: {
+      solid: {
+        color: 'hotpink',
+      }
+    }
+  }
+  ```
+  
+  ##### Multiple Solid Color Wallpapers
+  ```js
+  config: {
+    // ...Hyper config
+    wallpapers: {
+      solid: [
+        {
+          color: 'hotpink',
+        },
+        {
+          colors: '#421F41',
+        }
+      ]
+    }
+  }
+  ```
+</details>
+
+<details>
+  <summary>Mixed Wallpapers</summary>
+
+  ## Mixed Wallpapers
+  
+  ```js
+  config: {
+    // ...Hyper config
+    wallpapers: {
+      video: VideoConfig | VideoConfig[],
+      image: ImageConfig | ImageConfig[],
+      gradient: GradientConfig | GradientConfig[],
+      solid: SolidColorConfig | SolidColorConfig[]
+    }
+  }
+  ```
+  Multiple wallpaper types can be mixed together in the same config like so:
+
+  ```js
+  config: {
+    // ...Hyper config
+    wallpapers: {
+      solid: {
+        colors: '#421F41',
+      },
+      video: [{
+          source: '/Users/aryandeora/Desktop/Downloads/aurora.mp4',
+          speed: 1
+        }
+      ]
       image: [
         {
-          source: '/Users/aryandeora/Desktop/Downloads/image.gif',
+          source: '/Users/aryandeora/Desktop/Downloads/image.png',
         },
         {
           source: 'https://lh3.googleusercontent.com/proxy/pVwXyJdsROLTGHwWQmiPH4xEj-ZE1VjlAJbQN9jAYprMD7QV4R25AFoyFq2Cn0yhKnzCCTKw2lgffd4yeUxUQGljk6IhZqo',
