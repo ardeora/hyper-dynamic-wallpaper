@@ -11,6 +11,7 @@ const GradientContainer: FC<GradientConfigCategorized> = (config) => {
         overflow: 'hidden',
         width: '100%',
         height: '100%',
+        opacity: config.maskAlpha / 10,
       }}
       className={cx(getGradientCSS(config))}
     />

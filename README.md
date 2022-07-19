@@ -82,7 +82,9 @@ Look at specific wallpaper sections below for more information on how to add dif
     wallpapers: {
       video: {
         source: '/Users/aryandeora/Desktop/Downloads/aurora.mp4',
-        speed: 1
+        speed: 1,
+        // Opacity of the hyper window, 0 is completely opaque, Available: 0 - 10
+        maskAlpha: 7,
       }
     }
   }

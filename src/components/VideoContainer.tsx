@@ -21,6 +21,7 @@ const VideoContainer: FC<VideoConfigCategorized> = (config) => {
         position: 'fixed',
         top: 0,
         left: 0,
+        opacity: config.maskAlpha / 10,
       }}
       autoPlay
       loop

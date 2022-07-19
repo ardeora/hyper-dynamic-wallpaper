@@ -10,6 +10,7 @@ const SolidColorContainer: FC<SolidColorConfigCategorized> = (config) => {
         width: '100%',
         height: '100%',
         backgroundColor: config.color ? config.color : '#000',
+        opacity: config.maskAlpha / 10,
       }}
     />
   );

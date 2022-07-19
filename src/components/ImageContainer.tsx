@@ -16,6 +16,7 @@ const ImageContainer: FC<ImageConfigCategorized> = (config) => {
         backgroundColor: config.color ? config.color : IMAGE_DEFAULTS.backgroundColor,
         backgroundPosition: config.position ? config.position : IMAGE_DEFAULTS.backgroundPosition,
         backgroundSize: config.size ? config.size : IMAGE_DEFAULTS.backgroundSize,
+        opacity: config.maskAlpha / 10,
       }}
     />
   );

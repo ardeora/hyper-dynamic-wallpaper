@@ -9,6 +9,7 @@ export interface ImageConfig {
 export interface VideoConfig {
   source: string;
   speed?: number;
+  maskAlpha?: number;
 }
 
 export interface GradientConfig {
