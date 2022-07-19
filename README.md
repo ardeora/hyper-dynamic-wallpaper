@@ -72,9 +72,9 @@ Look at specific wallpaper sections below for more information on how to add dif
   | source   | yes      |       -       | Local path or link to video |
   | speed    | no       | 1             | Video Speed                 |
 
-  
+
   #### Examples: Video Wallpaper Config
-  
+
   ##### Single Video Wallpaper
   ```js
   config: {
@@ -89,7 +89,7 @@ Look at specific wallpaper sections below for more information on how to add dif
     }
   }
   ```
-  
+
   ##### Multiple Video Wallpapers
   ```js
   config: {
@@ -98,10 +98,14 @@ Look at specific wallpaper sections below for more information on how to add dif
       video: [
         {
           source: '/Users/aryandeora/Desktop/Downloads/aurora.mp4',
+          // Opacity of the hyper window, 0 is completely opaque, Available: 0 - 10
+          maskAlpha: 7,
         },
         {
           source: 'https://cdn.dribbble.com/users/288987/screenshots/15269498/media/3e7d1d6ca30d7793f72168cb99d6e5b8.mp4',
           speed: 0.8
+          // Opacity of the hyper window, 0 is completely opaque, Available: 0 - 10
+          maskAlpha: 7,
         }
       ]
     }
@@ -114,7 +118,7 @@ Look at specific wallpaper sections below for more information on how to add dif
   <summary>Image Wallpapers</summary>
 
   ## Image Wallpapers
-  
+
   ```js
   config: {
     // ...Hyper config
@@ -132,9 +136,9 @@ Look at specific wallpaper sections below for more information on how to add dif
   | position | no       | `center`      | CSS [`background-position`](https://developer.mozilla.org/en-US/docs/Web/CSS/background-position) property |
   | size     | no       | `cover`       | CSS [`background-size`](https://developer.mozilla.org/en-US/docs/Web/CSS/background-size) property     |
 
-  
+
   #### Examples: Image Wallpaper Config
-  
+
   ##### Single Image Wallpaper
   ```js
   config: {
@@ -142,11 +146,13 @@ Look at specific wallpaper sections below for more information on how to add dif
     wallpapers: {
       image: {
         source: '/Users/aryandeora/Desktop/Downloads/image.gif',
+        // Opacity of the hyper window, 0 is completely opaque, Available: 0 - 10
+        maskAlpha: 7,
       }
     }
   }
   ```
-  
+
   ##### Multiple Image Wallpapers
   ```js
   config: {
@@ -155,12 +161,16 @@ Look at specific wallpaper sections below for more information on how to add dif
       image: [
         {
           source: '/Users/aryandeora/Desktop/Downloads/image.png',
+          // Opacity of the hyper window, 0 is completely opaque, Available: 0 - 10
+          maskAlpha: 7,
         },
         {
           source: 'https://lh3.googleusercontent.com/proxy/pVwXyJdsROLTGHwWQmiPH4xEj-ZE1VjlAJbQN9jAYprMD7QV4R25AFoyFq2Cn0yhKnzCCTKw2lgffd4yeUxUQGljk6IhZqo',
           position: '90% 50%',
           size: '35%',
           color: '#08103a'
+          // Opacity of the hyper window, 0 is completely opaque, Available: 0 - 10
+          maskAlpha: 7,
         }
       ]
     }
@@ -172,7 +182,7 @@ Look at specific wallpaper sections below for more information on how to add dif
   <summary>Gradient Wallpapers</summary>
 
   ## Gradient Wallpapers
-  
+
   ```js
   config: {
     // ...Hyper config
@@ -188,11 +198,11 @@ Look at specific wallpaper sections below for more information on how to add dif
   | gradientAngle    | no       | 270       | Gradient direction in degrees |
   | animationTime    | no       | 0   | CSS [`animation-duration`](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-duration) property   |
   | timingFunction   | no       | `linear`      | CSS [`animation-timing-function`](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-timing-function) property |
-  
 
-  
+
+
   #### Examples: Gradient Wallpaper Config
-  
+
   ##### Single Gradient Wallpaper
   ```js
   config: {
@@ -202,12 +212,14 @@ Look at specific wallpaper sections below for more information on how to add dif
         colors: ['#F17C58', '#E94584', '#24AADB' , '#27DBB1','#FFDC18', '#FF3706'],
         animationTime: 30,
         timingFunction: 'linear',
-        gradientAngle: 270
+        gradientAngle: 270,
+        // Opacity of the hyper window, 0 is completely opaque, Available: 0 - 10
+        maskAlpha: 7,
       }
     }
   }
   ```
-  
+
   ##### Multiple Gradient Wallpapers
   ```js
   config: {
@@ -218,13 +230,17 @@ Look at specific wallpaper sections below for more information on how to add dif
           colors: ['#F17C58', '#E94584', '#24AADB' , '#27DBB1','#FFDC18', '#FF3706'],
           animationTime: 30,
           timingFunction: 'linear',
-          gradientAngle: 270
+          gradientAngle: 270,
+          // Opacity of the hyper window, 0 is completely opaque, Available: 0 - 10
+          maskAlpha: 7,
         },
         {
           colors: ['#421F41', '#0475A2'],
           animationTime: 5,
           timingFunction: 'linear',
-          gradientAngle: 270
+          gradientAngle: 270,
+          // Opacity of the hyper window, 0 is completely opaque, Available: 0 - 10
+          maskAlpha: 7,
         }
       ]
     }
@@ -236,7 +252,7 @@ Look at specific wallpaper sections below for more information on how to add dif
   <summary>Solid Color Wallpapers</summary>
 
   ## Solid Color Wallpapers
-  
+
   ```js
   config: {
     // ...Hyper config
@@ -249,9 +265,9 @@ Look at specific wallpaper sections below for more information on how to add dif
   | Property | Required | Default Value | Description                        |
   |----------|----------|---------------|------------------------------------|
   | color    | yes      |       -       | Background        |
-  
+
   #### Examples: Solid Color Wallpaper Config
-  
+
   ##### Single Solid Color Wallpaper
   ```js
   config: {
@@ -259,11 +275,13 @@ Look at specific wallpaper sections below for more information on how to add dif
     wallpapers: {
       solid: {
         color: 'hotpink',
+        // Opacity of the hyper window, 0 is completely opaque, Available: 0 - 10
+        maskAlpha: 7,
       }
     }
   }
   ```
-  
+
   ##### Multiple Solid Color Wallpapers
   ```js
   config: {
@@ -272,9 +290,13 @@ Look at specific wallpaper sections below for more information on how to add dif
       solid: [
         {
           color: 'hotpink',
+          // Opacity of the hyper window, 0 is completely opaque, Available: 0 - 10
+          maskAlpha: 7,
         },
         {
           color: '#421F41',
+          // Opacity of the hyper window, 0 is completely opaque, Available: 0 - 10
+          maskAlpha: 7,
         }
       ]
     }
@@ -286,7 +308,7 @@ Look at specific wallpaper sections below for more information on how to add dif
   <summary>Mixed Wallpapers</summary>
 
   ## Mixed Wallpapers
-  
+
   ```js
   config: {
     // ...Hyper config
@@ -309,18 +331,24 @@ Look at specific wallpaper sections below for more information on how to add dif
       },
       video: [{
           source: '/Users/aryandeora/Desktop/Downloads/aurora.mp4',
-          speed: 1
+          speed: 1,
+          // Opacity of the hyper window, 0 is completely opaque, Available: 0 - 10
+          maskAlpha: 7,
         }
       ]
       image: [
         {
           source: '/Users/aryandeora/Desktop/Downloads/image.png',
+          // Opacity of the hyper window, 0 is completely opaque, Available: 0 - 10
+          maskAlpha: 7,
         },
         {
           source: 'https://lh3.googleusercontent.com/proxy/pVwXyJdsROLTGHwWQmiPH4xEj-ZE1VjlAJbQN9jAYprMD7QV4R25AFoyFq2Cn0yhKnzCCTKw2lgffd4yeUxUQGljk6IhZqo',
           position: '90% 50%',
           size: '35%',
-          color: '#08103a'
+          color: '#08103a',
+          // Opacity of the hyper window, 0 is completely opaque, Available: 0 - 10
+          maskAlpha: 7,
         }
       ]
     }

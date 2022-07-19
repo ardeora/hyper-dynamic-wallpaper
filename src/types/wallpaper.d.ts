@@ -4,6 +4,7 @@ export interface ImageConfig {
   repeat?: string;
   size?: string;
   color?: string;
+  maskAlpha?: number;
 }
 
 export interface VideoConfig {
@@ -17,10 +18,12 @@ export interface GradientConfig {
   gradientAngle?: number;
   animationTime?: number;
   timingFunction?: string;
+  maskAlpha?: number;
 }
 
 export interface SolidColorConfig {
   color: string;
+  maskAlpha?: number;
 }
 
 export interface WallpaperConfig {
